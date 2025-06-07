@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+    min-height: 300px;
+
+    .header-bx-logo {
+        bottom: -110px;
+        flex-direction: row;
+        column-gap: 32px;
+        row-gap: 16px;
+        align-items: end;
+
+        & > div {
+            justify-content: flex-end;
+        }
+
+        .header-titles-info {
+            flex-direction: row;
+        }
+    }
+
+    .header-logo {
+        height: 170px;
+        width: 170px;
+    }
+}
+
+.section {
+    .section-bx-title {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .section-bx-title::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        width: 25%;
+        background-color: white;
+    }
+}
+
+.main {
+    top: 200px;
+
+    .accordion-header {
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .card {
+        flex-direction: row;
+
+        img {
+            min-width: 150px;
+            max-width: 150px;
+            min-height: 150px;
+            max-height: 150px;
+            object-fit: cover;
+        }
+    }
+}
+
+/* Responsividade do cabeçalho */
+
+@media screen and (max-width: 767px) {
+    .main {
+        top: 260px;
+    }
+
+    header.header div.header-bx-logo {
+        flex-direction: column;
+        align-items: center;
+        bottom: -190px;
+    }
+
+    header.header div.header-bx-logo > div {
+        justify-content: center;
+    }
+
+    header.header div.header-titles {
+        flex-wrap: wrap;
+        
+        .header-titles-info {
+            flex-direction: column;
+
+            & .mx-3.text-white {
+                display: none;
+            }
+        }
+
+        & > p {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-titles {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 454px) {
+    .main {
+        top: 340px;
+    }
+
+    header.header div.header-bx-logo {
+        bottom: -250px;
+    }
+}
+
+
+/* Responsividade dos cartões */
+
+/* Responsividade dos hamburgers */
+@media screen and (max-width: 900px) {
+
+    #hamburgueres div.card {
+        flex-direction: column;
+
+        .card-bx-img {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                min-width: 150px;
+                max-width: 100%;
+            }
+        }
+    }
+
+}
+
+/* Responsividade das bebidas */
+@media screen and (max-width: 450px) {
+
+    #bebidas div.card {
+        flex-direction: column;
+
+        .card-bx-img {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            img {
+                min-width: 150px;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
